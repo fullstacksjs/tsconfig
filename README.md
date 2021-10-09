@@ -53,7 +53,7 @@ Add to your tsconfig.json:
 
 ```jsonc
 {
-  "extends": "@fullstacksjs/tsconfig/esm.json"
+  "extends": "@fullstacksjs/tsconfig/esm"
 }
 ```
 
@@ -61,7 +61,7 @@ Add to your tsconfig.json:
 
 ```jsonc
 {
-  "extends": "@fullstacksjs/tsconfig/react.json"
+  "extends": "@fullstacksjs/tsconfig/react"
 }
 ```
 
@@ -69,7 +69,7 @@ Add to your tsconfig.json:
 
 ```jsonc
 {
-  "extends": "@fullstacksjs/tsconfig/react-lib.json"
+  "extends": "@fullstacksjs/tsconfig/react-lib"
 }
 ```
 
