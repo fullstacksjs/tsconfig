@@ -23,7 +23,6 @@
     "postpack": "./scripts/removeEntries.js && pinst --enable",
     "prepare": "husky install"
   },
-  "main": "index.js",
   "devDependencies": {
     "@fullstacksjs/eslint-config": "6.6.0",
     "eslint": "7.32.0",
