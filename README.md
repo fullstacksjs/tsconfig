@@ -39,6 +39,40 @@ Add to your tsconfig.json:
 }
 ```
 
+## Configs
+
+* NodeJS CommonJS:
+
+```jsonc
+{
+  "extends": "@fullstacksjs/tsconfig"
+}
+```
+
+* NodeJS ESM Library
+
+```jsonc
+{
+  "extends": "@fullstacksjs/tsconfig/esm.json"
+}
+```
+
+* React App:
+
+```jsonc
+{
+  "extends": "@fullstacksjs/tsconfig/react.json"
+}
+```
+
+* React library:
+
+```jsonc
+{
+  "extends": "@fullstacksjs/tsconfig/react-lib.json"
+}
+```
+
 Feel free to use 💛
 
 [logo]: https://raw.githubusercontent.com/fullstacksjs/tsconfig/master/assets/logo.svg

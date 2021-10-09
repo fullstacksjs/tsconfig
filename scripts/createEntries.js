@@ -4,6 +4,7 @@ const fs = require('fs/promises');
 const jsoncParser = require('jsonc-parser');
 const path = require('path');
 const { getConfigs, getFileName } = require('./utils');
+const baseConfig = require('./base.json');
 
 async function createEntry(file) {
   const entryFile = await fs.stat(file);
@@ -13,7 +14,19 @@ async function createEntry(file) {
   const content = jsoncParser.parse(config);
   const { compilerOptions } = content;
   const dest = path.resolve(process.cwd(), getFileName(file));
-  return fs.writeFile(dest, JSON.stringify({ compilerOptions }, {}, 2));
+  return fs.writeFile(
+    dest,
+    JSON.stringify(
+      {
+        compilerOptions: {
+          ...baseConfig,
+          ...compilerOptions,
+        },
+      },
+      {},
+      2,
+    ),
+  );
 }
 
 async function createEntries() {
