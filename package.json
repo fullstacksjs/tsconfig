@@ -1,6 +1,6 @@
 {
   "name": "@fullstacksjs/tsconfig",
-  "version": "0.2.0-0",
+  "version": "0.2.0",
   "license": "MIT",
   "author": "fullstacks <fullstacksjs@gmail.com>",
   "description": "Fullstacks community base tsconfig",
@@ -13,13 +13,14 @@
     "registry": "https://registry.npmjs.org"
   },
   "files": [
-    "./*.json"
+    "*.json"
   ],
   "scripts": {
     "lint": "eslint . --fix",
-    "prepublishOnly": "pinst --disable",
-    "version": "./scripts/createEntries.js",
+    "prepublishOnly": "./scripts/createEntries.js && pinst --disable",
     "postpublish": "./scripts/removeEntries.js && pinst --enable",
+    "prepack": "./scripts/createEntries.js && pinst --disable",
+    "postpack": "./scripts/removeEntries.js && pinst --enable",
     "prepare": "husky install"
   },
   "main": "index.js",

@@ -34,4 +34,6 @@ async function createEntries() {
   return Promise.all(files.map(createEntry));
 }
 
-createEntries();
+createEntries().finally(() => {
+  process.exit(0);
+});
