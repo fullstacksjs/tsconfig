@@ -17,7 +17,8 @@
   ],
   "scripts": {
     "lint": "eslint . --fix",
-    "prepublishOnly": "./scripts/createEntries.js && pinst --disable",
+    "prepublishOnly": "pinst --disable",
+    "version": "./scripts/createEntries.js",
     "postpublish": "./scripts/removeEntries.js && pinst --enable",
     "prepare": "husky install"
   },
