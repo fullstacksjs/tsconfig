@@ -2,6 +2,7 @@
   "allowSyntheticDefaultImports": true,
   "esModuleInterop": true,
   "forceConsistentCasingInFileNames": true,
+  "incremental": true,
   "noEmitOnError": true,
   "noFallthroughCasesInSwitch": true,
   "noImplicitOverride": true,

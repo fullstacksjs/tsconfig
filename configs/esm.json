@@ -6,6 +6,6 @@
     "lib": ["ESNext"],
     "declaration": true,
     "moduleResolution": "Node",
-    "resolveJsonModule": false // ESM doesn't yet support JSON modules.
+    "resolveJsonModule": true
   }
 }
