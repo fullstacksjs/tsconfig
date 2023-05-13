@@ -1,6 +1,6 @@
 {
   "name": "@fullstacksjs/tsconfig",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "author": "fullstacksJS <fullstacksjs@gmail.com>",
   "description": "FullstacksJS community base tsconfig",
