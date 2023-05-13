@@ -2,8 +2,8 @@
   "name": "@fullstacksjs/tsconfig",
   "version": "1.0.0",
   "license": "MIT",
-  "author": "fullstacks <fullstacksjs@gmail.com>",
-  "description": "Fullstacks community base tsconfig",
+  "author": "fullstacksJS <fullstacksjs@gmail.com>",
+  "description": "FullstacksJS community base tsconfig",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fullstacksjs/tsconfig.git"
@@ -24,15 +24,15 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@fullstacksjs/eslint-config": "8.10.0",
-    "eslint": "8.32.0",
+    "@fullstacksjs/eslint-config": "9.3.1",
+    "eslint": "8.40.0",
     "husky": "8.0.3",
     "jsonc-parser": "3.2.0",
-    "lint-staged": "13.1.0",
-    "np": "7.6.3",
+    "lint-staged": "13.2.2",
+    "np": "7.7.0",
     "pinst": "3.0.0",
-    "prettier": "2.8.3",
-    "typescript": "4.9.4"
+    "prettier": "2.8.8",
+    "typescript": "5.0.4"
   },
   "peerDependencies": {
     "typescript": ">=4"
