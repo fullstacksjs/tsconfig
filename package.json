@@ -24,7 +24,7 @@
     "postpublish": "pnpm cleanup && pinst --enable",
     "prepack": "pnpm build && pinst --disable",
     "postpack": "pnpm cleanup && pinst --enable",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@fullstacksjs/eslint-config": "12.1.1",
