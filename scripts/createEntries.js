@@ -1,20 +1,22 @@
 #!/usr/bin/env node
 
-const fs = require('fs/promises');
-const jsoncParser = require('jsonc-parser');
-const path = require('path');
-const { getConfigs, getFileName } = require('./utils');
-const baseConfig = require('./base.json');
+// @ts-check
+import { readFile, stat, writeFile } from 'fs/promises';
+import jsonc from 'jsonc-parser';
+import { resolve } from 'path';
+
+import baseConfig from './base.json' with { type: 'json' };
+import { getConfigs, getFileName } from './utils.js';
 
 async function createEntry(file) {
-  const entryFile = await fs.stat(file);
+  const entryFile = await stat(file);
   if (!entryFile.isFile()) return;
 
-  const config = await fs.readFile(file, { encoding: 'utf-8' });
-  const content = jsoncParser.parse(config);
+  const config = await readFile(file, { encoding: 'utf-8' });
+  const content = jsonc.parse(config);
   const { compilerOptions } = content;
-  const dest = path.resolve(process.cwd(), getFileName(file));
-  return fs.writeFile(
+  const dest = resolve(process.cwd(), getFileName(file));
+  return writeFile(
     dest,
     JSON.stringify(
       {
@@ -23,7 +25,7 @@ async function createEntry(file) {
           ...compilerOptions,
         },
       },
-      {},
+      null,
       2,
     ),
   );

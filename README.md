@@ -20,42 +20,34 @@ Shared [TypeScript config][tsconfig] for community projects.
 $ npm install --save-dev @fullstacksjs/tsconfig typescript
 ```
 
-### yarn :
-
-```sh
-$ yarn add --dev @fullstacksjs/tsconfig typescript
-```
-
 ## Usage
 
 Add to your tsconfig.json:
 
-```json
-{
-  "extends": "@fullstacksjs/tsconfig",
-  "compilerOptions": {
-    "outDir": "dist"
-  }
-}
-```
-
-## Configs
-
-* NodeJS CommonJS:
+* TS Library
 
 ```jsonc
 {
-  "extends": "@fullstacksjs/tsconfig"
+  "extends": "@fullstacksjs/tsconfig/cjs"
 }
 ```
 
-* NodeJS ESM Library
+* ESM
 
 ```jsonc
 {
   "extends": "@fullstacksjs/tsconfig/esm"
 }
 ```
+
+* CJS
+
+```jsonc
+{
+  "extends": "@fullstacksjs/tsconfig/cjs"
+}
+```
+
 
 * React App:
 
@@ -65,7 +57,7 @@ Add to your tsconfig.json:
 }
 ```
 
-* React library:
+* React Library:
 
 ```jsonc
 {

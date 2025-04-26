@@ -15,5 +15,5 @@
   "skipLibCheck": true,
   "strict": true,
   "stripInternal": true,
-  "useDefineForClassFields": true
+  "verbatimModuleSyntax": true
 }

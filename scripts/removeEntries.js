@@ -1,19 +1,25 @@
 #!/usr/bin/env node
 
-const { getConfigs, getFileName } = require('./utils');
-const fs = require('fs/promises');
-const path = require('path');
+// @ts-check
+import { stat, unlink } from 'fs/promises';
+import { resolve } from 'path';
 
+import { getConfigs, getFileName } from './utils.js';
+
+/**
+ * @param {import("fs").PathLike} file
+ */
 async function removeEntry(file) {
-  const entryFile = await fs.stat(file);
+  const entryFile = await stat(file);
   if (!entryFile.isFile()) return undefined;
-  const dest = path.resolve(process.cwd(), getFileName(file));
+  const dest = resolve(process.cwd(), getFileName(file));
 
   try {
-    const destFile = await fs.stat(dest);
+    const destFile = await stat(dest);
     if (!destFile.isFile()) return;
-    return fs.unlink(dest);
-  } catch {
+    return unlink(dest);
+  } catch (error) {
+    console.error(`Error removing file: ${error.message}`);
     return undefined;
   }
 }

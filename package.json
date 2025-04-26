@@ -15,31 +15,30 @@
   "files": [
     "*.json"
   ],
+  "type": "module",
   "scripts": {
     "lint": "eslint . --fix",
-    "prepublishOnly": "./scripts/createEntries.js && pinst --disable",
-    "postpublish": "./scripts/removeEntries.js && pinst --enable",
-    "prepack": "./scripts/createEntries.js && pinst --disable",
-    "postpack": "./scripts/removeEntries.js && pinst --enable",
+    "build": "./scripts/createEntries.js",
+    "cleanup": "./scripts/removeEntries.js",
+    "prepublishOnly": "pnpm build && pinst --disable",
+    "postpublish": "pnpm cleanup && pinst --enable",
+    "prepack": "pnpm build && pinst --disable",
+    "postpack": "pnpm cleanup && pinst --enable",
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@fullstacksjs/eslint-config": "9.3.1",
-    "eslint": "8.40.0",
-    "husky": "8.0.3",
-    "jsonc-parser": "3.2.0",
-    "lint-staged": "13.2.2",
-    "np": "7.7.0",
+    "@fullstacksjs/eslint-config": "12.1.1",
+    "eslint": "9.25.1",
+    "husky": "9.1.7",
+    "jsonc-parser": "3.3.1",
+    "lint-staged": "15.5.1",
+    "np": "10.2.0",
     "pinst": "3.0.0",
-    "prettier": "2.8.8",
-    "typescript": "5.0.4"
+    "prettier": "3.5.3",
+    "typescript": "5.8.3"
   },
   "peerDependencies": {
-    "typescript": ">=4"
-  },
-  "volta": {
-    "node": "18.13.0",
-    "npm": "9.3.1"
+    "typescript": ">=5"
   },
   "np": {
     "yolo": true

@@ -5,8 +5,11 @@
     "module": "ESNext",
     "lib": ["ESNext"],
     "declaration": true,
+    "declarationMap": true,
     "moduleResolution": "Node",
     "moduleDetection": "force",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "isolatedModules": true
   }
 }

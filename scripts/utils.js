@@ -1,14 +1,10 @@
-const fs = require('fs/promises');
-const path = require('path');
+import { readdir } from 'fs/promises';
+import { basename, resolve } from 'path';
 
-async function getConfigs(dir) {
-  const files = await fs.readdir(dir);
-  return files.map(file => path.resolve(process.cwd(), dir, file));
+// @ts-check
+export async function getConfigs(dir) {
+  const files = await readdir(dir);
+  return files.map(file => resolve(process.cwd(), dir, file));
 }
 
-const getFileName = f => path.basename(f);
-
-module.exports = {
-  getConfigs,
-  getFileName,
-};
+export const getFileName = f => basename(f);
