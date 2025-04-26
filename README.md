@@ -24,46 +24,22 @@ $ npm install --save-dev @fullstacksjs/tsconfig typescript
 
 Add to your tsconfig.json:
 
-* TS Library
-
 ```jsonc
 {
-  "extends": "@fullstacksjs/tsconfig/cjs"
+  "extends": "@fullstacksjs/tsconfig/<preset>"
 }
 ```
 
-* ESM
+## Presets
 
-```jsonc
-{
-  "extends": "@fullstacksjs/tsconfig/esm"
-}
-```
+| preset    | description   |
+| --------- | ------------- |
+| cjs       | CJS Codebase  |
+| esm       | ESM Codebase  |
+| lib       | TS Library    |
+| react     | React App     |
+| react-lib | React Library |
 
-* CJS
-
-```jsonc
-{
-  "extends": "@fullstacksjs/tsconfig/cjs"
-}
-```
-
-
-* React App:
-
-```jsonc
-{
-  "extends": "@fullstacksjs/tsconfig/react"
-}
-```
-
-* React Library:
-
-```jsonc
-{
-  "extends": "@fullstacksjs/tsconfig/react-lib"
-}
-```
 
 Feel free to use 💛
 
