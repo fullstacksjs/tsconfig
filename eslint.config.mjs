@@ -1,3 +1,3 @@
 import { defineConfig } from '@fullstacksjs/eslint-config';
 
-export default defineConfig();
+export default defineConfig({ import: { extensions: 'always' } });
