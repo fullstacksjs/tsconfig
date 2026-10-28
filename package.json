@@ -27,20 +27,21 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@fullstacksjs/eslint-config": "12.1.1",
-    "eslint": "9.25.1",
+    "@fullstacksjs/eslint-config": "15.4.0",
+    "eslint": "10.13.0",
     "husky": "9.1.7",
     "jsonc-parser": "3.3.1",
-    "lint-staged": "15.5.1",
-    "np": "10.2.0",
+    "lint-staged": "17.6.0",
+    "np": "12.1.1",
     "pinst": "3.0.0",
-    "prettier": "3.5.3",
-    "typescript": "5.8.3"
+    "prettier": "3.9.10",
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "typescript": ">=5"
   },
   "np": {
     "yolo": true
-  }
+  },
+  "packageManager": "pnpm@12.16.1"
 }
